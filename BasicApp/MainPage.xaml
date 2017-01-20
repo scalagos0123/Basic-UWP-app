@@ -55,13 +55,14 @@
                 Width="300"
                 Name="Input">
 
-                <TextBlock>Username</TextBlock>
-                <TextBox Name="Username"></TextBox>
+                    <TextBlock>Username</TextBlock>
+                    <TextBox Name="Username"></TextBox>
 
-                <TextBlock Margin="0,20,0,0">Password</TextBlock>
-                <PasswordBox Name="Password"></PasswordBox>
+                    <TextBlock Margin="0,20,0,0">Password</TextBlock>
+                    <PasswordBox Name="Password"></PasswordBox>
 
-                <Button x:Name="Login" Margin="0, 20, 0, 0" HorizontalAlignment="Stretch" Click="Login_Click">Login</Button>
+                    <Button Name="Login" Margin="0, 20, 0, 0" HorizontalAlignment="Stretch" Click="Login_Click">Login</Button>
+                    
             </StackPanel>
             </RelativePanel>
         </RelativePanel>

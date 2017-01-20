@@ -28,6 +28,9 @@ namespace BasicApp
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            StackPanel input_panel = (StackPanel)this.FindName("Input");
+            input_panel.Children.Remove((TextBlock)this.FindName("Fail"));
+
             TextBox uname_in = (TextBox)this.FindName("Username");
             PasswordBox pname_in = (PasswordBox)this.FindName("Password");
 
@@ -36,7 +39,13 @@ namespace BasicApp
 
             if (uname == "shaun" && pword == "shaun")
             {
-                Frame.Navigate((typeof (Login_Success)), uname);
+                Frame.Navigate(typeof (Login_Success), uname);
+            } else
+            {
+                TextBlock fail = new TextBlock();
+                fail.Name = "Fail";
+                fail.Text = "Invalid username and password";
+                input_panel.Children.Add(fail);
             }
         }
     }
